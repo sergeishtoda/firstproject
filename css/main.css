@@ -1,0 +1,28 @@
+.mainwrapper {
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+}
+
+body {
+min-height: 100%;
+min-width: 800px;
+position: relative;
+overflow: hidden;
+}
+
+.description {
+    float: left;
+    padding: 10px;
+}
+
+.phone {
+    float: right;
+    font-size: 30px;
+}
+
+header {
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    background-color: #00d9ff;
+}
