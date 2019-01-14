@@ -5,7 +5,8 @@ margin-right: 30px;
 min-height: 100%;
 min-width: 800px;
 position: relative;
-overflow: hidden;
+overflow-x: hidden;
+overflow-y: scroll
 }
 
 .description {
@@ -24,7 +25,7 @@ text-align: left;
 
 header {
     display: flex;
-    background-color: #00d9ff;
+    background-color: #ffffff;
 }
 
 .socials {
@@ -43,17 +44,84 @@ height: 24px;
 
 }
 
-nav {
+
+.logo {
+    margin-top: 26px;
     display: flex;
-    background-color: #ffd900
+    flex-direction: row;
 }
 
+.logo div{
+    justify-content: right;
+}
+
+nav {
+    background-color: #ffffff;
+    display: flex;
+}
+
+nav div {
+    flex-direction: row;
+    flex:1;
+}
 
 .menubar {
-    display: table;
-    flex: 50%;
+    display: flex;
+    flex-direction: row;
 }
 
 .menubar li {
-    display: table-cell;
+    list-style-type: none;
+    flex: 1 0 auto; 
+}
+
+.center div p {
+    text-align: center;
+}
+ .center {
+     position: relative;
+ }
+
+.r1 {
+    z-index: 1;
+    position: absolute;
+    height: 360px;
+    width: 360px;
+    transform: rotate(45deg);
+    background-color: chocolate;
+    top: 90px;
+    left: 260px;
+}
+
+.r1_text {
+    text-align: center;
+    position: absolute;
+    z-index: 3;
+    width: 360px;
+    height: 290px;
+    top: 180px;
+    left: 260px;
+}
+
+.r2 {
+    position: relative;
+    top: -100px;
+    left: 600px;
+}
+
+.r2_crop {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    transform: rotate(45deg);
+    top: 200px;
+    left: 75px;
+}
+
+.r2_img {
+    position: absolute;
+    transform: rotate(-45deg);
+    top: -100px;
+    left: -180px;
 }
