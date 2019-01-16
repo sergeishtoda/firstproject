@@ -15,13 +15,13 @@ background-color: #f0f0f0
 /* ====== MAIN_BOX ====== */
 
 .mainbox {
+    overflow: hidden;
     border-radius: 3px;
     /*padding: 5px;*/
     box-shadow: 5px 5px 30px #555555;
     margin: auto;
     width: 1080px;
     height: 100%;
-    background-color: #ffffff;
 }
 
 /* ============== HEADER ============== */
@@ -102,23 +102,53 @@ nav div {
     flex: 1 0 auto; 
 }
 
-.center div p {
-    text-align: center;
-}
+
  .center {
-     background-color: #ffffff;
+     background-color: white;
+     background-image: url(../images/sea_background.png);
+     padding: 0px;
+     margin: 0px;
+     border: 0px;
      position: relative;
  }
 
+ .center div p {
+    text-align: center;
+}
+
+.sea_img {
+    overflow: hidden;
+}
+
+ .whitecrop1 {
+     top: -295px;
+     left: -45px;
+     position: relative;
+     height: 734px;
+     width: 734px;
+     transform: rotate(45deg);
+     background-color: white;
+    
+ }
+
+ .whitecrop2 {
+    top: -1026px;
+    left: 880px;
+    position: relative;
+    height: 734px;
+    width: 734px;
+    transform: rotate(45deg);
+    background-color: white;
+}
+
 .r1 {
-    z-index: 1;
     position: absolute;
     height: 360px;
     width: 360px;
     transform: rotate(45deg);
     background-color: #BA9898;
     top: 90px;
-    left: 210px;
+    left: 143px;
 }
 
 .r1_text {
@@ -127,7 +157,6 @@ nav div {
     position: absolute;
     padding: 3px 3px 3px 3px;
     font-size: 16px;
-    z-index: 3;
     width: 360px;
     height: 290px;
     transform: rotate(-45deg);
@@ -141,11 +170,17 @@ nav div {
 
 
 .r2 {
-    position: relative;
-    top: -100px;
-    left: 600px;
+    position: absolute;
+    height: 750px;
+    width: 750px;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    left: 310px;
+    top: -157px;
+
 }
 
+/*
 .r2_crop {
     width: 400px;
     height: 400px;
@@ -155,15 +190,9 @@ nav div {
     top: 200px;
     left: 75px;
 }
+*/
 
 .r2_img {
     position: relative;
-    transform: rotate(-45deg);
-    top: -100px;
-    left: -180px;
-}
-
-.sea_block {
-    height: 1167px;
-    background-image: url(../images/sea_background.png);
+    right: 62px;
 }
