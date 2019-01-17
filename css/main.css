@@ -95,6 +95,7 @@ nav div {
 .menubar {
     display: flex;
     flex-direction: row;
+    font-size: 26px;
 }
 
 .menubar li {
@@ -108,7 +109,7 @@ nav div {
 
 .course::after {
     content: '\2630';
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .course ul {
@@ -118,7 +119,6 @@ nav div {
     overflow: visible;
     z-index: 1000;
 }
-
 
 .course:hover ul {
     display: block;
@@ -206,21 +206,37 @@ nav div {
 
 .tblocks {
     display: flex;
+    position: absolute;
     flex-direction: row;
     justify-content: space-around;
+    top: 750px;
+    width: 100%;
     z-index: 900;
 }
 
 
 
-.tb {
+.tblocks div {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    box-shadow: 8px 8px 10px #000000d7;
     display: block;
-    width: 100px;
-    height: 50px;
-    background-color: rgba(255, 0, 0, 0.9);
+    width: 280px;
+    height: 190px;
+    background-color: rgba(0, 0, 0, 0.5);
     flex-direction: row;
 }
 
+#tb {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(226, 226, 226, 0.3);
+    transform: rotate(45deg);
+
+}
 /*
 .r2_crop {
     width: 400px;
