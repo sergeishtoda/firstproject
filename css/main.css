@@ -12,6 +12,13 @@ overflow-y: scroll;
 background-color: #f0f0f0
 }
 
+a {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
 /* ====== MAIN_BOX ====== */
 
 .mainbox {
@@ -93,14 +100,44 @@ nav div {
 }
 
 .menubar {
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     flex-direction: row;
-    font-size: 26px;
+    font-size: 22px;
 }
 
-.menubar li {
+ .menubar li {
     list-style-type: none;
     flex: 1 0 auto; 
+    display: inline-block;
+}
+
+.menubar a {
+    color: #000;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.menubar a:after {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: '.';
+    color: transparent;
+    background: rgba(186,152,152,0);
+    height: 2px;
+    transition: all 0.3s;
+}
+
+.menubar a:hover {
+    color: rgb(186,152,152);
+}
+
+.menubar a:hover:after {
+    bottom: 25px;
+    background: rgba(186,152,152,1);
 }
 
 .course {
@@ -108,7 +145,7 @@ nav div {
 }
 
 .course::after {
-    content: '\2630';
+ /*   content: '\2630'; */
     font-size: 20px;
 }
 
@@ -120,10 +157,10 @@ nav div {
     z-index: 1000;
 }
 
-.course:hover ul {
+/*.course:hover ul {
     display: block;
     visibility: visible;
-}
+} */
 
 
  .center {
@@ -191,8 +228,7 @@ nav div {
     line-height: 16px;
  }
 
-
-.r2 {
+ .r2 {
     position: absolute;
     height: 750px;
     width: 750px;
@@ -203,29 +239,116 @@ nav div {
 
 }
 
+.r3 {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    left: 226px;
+    top: 452px;
+
+}
+
+.r4 {
+    background-color: #BACBDC;
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    -webkit-clip-path: polygon(50% 0%, 89% 40%, 79% 50%, 89% 60%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 89% 40%, 79% 50%, 89% 60%, 50% 100%, 0% 50%);
+    left: 351px;
+    top: 377px;
+}
+.r4_small {
+    background-color: #BACBDC;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    left: 559px;
+    top: 482px;
+}
+
+.r4 div {
+    padding-top: 30px;
+}
+
+.r4 div a:hover {
+    text-decoration: overline;
+    color: rgb(240, 240, 240);
+    font-weight: 400;
+
+}
+
+.r4 * {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(41, 41, 41);
+    display: block;
+    position: relative;
+    padding-top: 24px;
+    margin: auto;
+    width: 200px;
+    height: 8px;
+    font-size: 16px;
+    transition: all 0.22s;
+    text-align: center;
+    line-height: 4px;
+}
+
+
 
 .tblocks {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    margin: 50px;
     display: flex;
     position: absolute;
     flex-direction: row;
     justify-content: space-around;
     top: 750px;
-    width: 100%;
+    width: 90%;
     z-index: 900;
+ 
 }
 
 
 
 .tblocks div {
-    border-width: 1px;
+  /*  border-width: 1px;  
     border-color: black;
-    border-style: solid;
-    box-shadow: 8px 8px 10px #000000d7;
+    border-style: solid; */
+   /* box-shadow: 8px 8px 10px #000000d7; */
     display: block;
     width: 280px;
-    height: 190px;
-    background-color: rgba(0, 0, 0, 0.5);
+    height: 158px;
+    background-color: rgba(9, 15, 19, 0.8);
     flex-direction: row;
+
+}
+
+.tb1 {
+    padding-top: 20px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.tb1 a {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    transition: all 0.22s ease-out 0s;
+    text-align: center;
+    line-height: 43px;
+}
+
+.tb1 a:hover {
+    background-color: rgba(154, 146, 188, 0.75);
+    color: #000;
 }
 
 #tb {
@@ -233,7 +356,7 @@ nav div {
     margin-bottom: auto;
     width: 15px;
     height: 15px;
-    background-color: rgba(226, 226, 226, 0.3);
+    background-color: rgba(238, 238, 238, 0.884);
     transform: rotate(45deg);
 
 }
@@ -252,4 +375,19 @@ nav div {
 .r2_img {
     position: relative;
     right: 62px;
+}
+
+
+
+
+.map {
+    position: relative;
+}
+
+.map div {
+    bottom: 0px;
+    width: 1080px; 
+    height: 305px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.33);
 }
