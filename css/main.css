@@ -391,3 +391,57 @@ nav div {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.33);
 }
+
+
+
+/* ================= SLIDER ================= */
+
+.slider {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.view {
+    display: block;
+    position: absolute;
+    background-color: green;
+    overflow: hidden;
+    height: 240px;
+    width: 400px;
+    top: 32px;
+    left: 328px;
+}
+
+.slides {
+    display: block;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(139, 157, 175);
+    height: 240px;
+    width: 3000px;
+    box-sizing: content-box;
+    top: 0px;
+    left: 0px;
+    transition: transform 0.9s;
+    transform: translateX(0px);
+}
+
+.slides div {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+    display: inline-block;
+    height: 240px;
+    width: 400px;
+}
+
+#slider_right {
+    background-color: red;
+    position: absolute;
+    top: 146px;
+    left: 750px;
+}
