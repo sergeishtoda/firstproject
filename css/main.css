@@ -410,14 +410,14 @@ nav div {
     position: absolute;
     overflow: hidden;
     height: 180px;
-    width: 460px;
+    width: 400px;
     top: 0px;
     left: 460px;
 }
 
 .slides {
     color: white;
-    display: block;
+    display: flex;
     position: absolute;
     padding: 0;
     margin: 0;
@@ -430,8 +430,11 @@ nav div {
     transform: translateX(0px);
 }
 
+.slides div {
+    height: 100%;
+}
+
 .slide1 {
-    display: flex;
     flex-direction: column;
 }
 
@@ -450,7 +453,6 @@ nav div {
 }
 
 .slide2 {
-    display: flex;
     flex-direction: column;
 }
 
@@ -478,6 +480,14 @@ nav div {
     position: absolute;
     top: 80px;
     left: 875px;
+}
+
+#slider_left {
+    color: white;
+    background-color: rgb(14, 23, 27);
+    position: absolute;
+    top: 80px;
+    left: 378px;
 }
 
 /* ======== ADVANTEGES ========== */

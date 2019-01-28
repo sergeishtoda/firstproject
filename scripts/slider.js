@@ -1,4 +1,5 @@
-var sl = document.getElementById("slider_right");
+var slr = document.getElementById("slider_right");
+var sll = document.getElementById("slider_left");
 
 sl.addEventListener("click", moveright);
 
