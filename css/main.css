@@ -1,15 +1,15 @@
 
 body {
-font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
-width: 100%;
-height: 100%;
-margin: 0px;
-padding: 0px;
-min-height: 100%;
-position: relative;
-overflow-x: hidden;
-overflow-y: scroll;
-background-color: #f0f0f0
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    width: 100%;
+}
+    
+#main {
+    overflow: hidden;
+    min-width: 1080px;
 }
 
 a {
@@ -19,33 +19,22 @@ a {
     text-decoration: none;
 }
 
-/* ====== MAIN_BOX ====== */
 
-.mainbox {
-    overflow: hidden;
-    border-radius: 3px;
-    /*padding: 5px;*/
-    box-shadow: 5px 5px 30px #555555;
-    margin: auto;
-    width: 1080px;
-    height: 100%;
-}
 
 /* ============== HEADER ============== */
 
 
 header {
+    position: relative;
+    z-index: 10;
     padding-top: 30px;
     padding-left: 36px;
     display: flex; 
-    /*display: inline-block;*/
-    background-color: #ffffff;
 }
 
 .description {
 flex: 3;
 font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
-/*padding-left: 1em;*/
 font-size: 24px;
 text-align: left;
 }
@@ -76,21 +65,22 @@ height: 24px;
 
 
 .logo {
+    z-index: 10;
+    position: relative;
     font-family: 'Josefin Sans', 'Arial', sans-serif;
     padding-left: 36px;
-    background-color: #ffffff;
     padding-top: 26px;
     display: flex;
     flex-direction: row;
 }
 
 .logo div{
-    background-color: #ffffff;
     justify-content: right;
 }
 
 nav {
-    background-color: #ffffff;
+    position: relative;
+    z-index: 30;
     display: flex;
 }
 
@@ -98,6 +88,14 @@ nav div {
     flex-direction: row;
     flex:1;
 }
+
+/*
+@media (max-width: 1079px) {
+    #f_menu_left {
+        max-width: 36em; 
+    }
+}
+*/
 
 .menubar {
     font-family: 'Roboto Condensed', sans-serif;
@@ -116,6 +114,7 @@ nav div {
     color: #000;
     position: relative;
     transition: all 0.3s;
+    text-decoration: none;
 }
 
 .menubar a:after {
@@ -145,7 +144,6 @@ nav div {
 }
 
 .course::after {
- /*   content: '\2630'; */
     font-size: 20px;
 }
 
@@ -157,13 +155,10 @@ nav div {
     z-index: 1000;
 }
 
-/*.course:hover ul {
-    display: block;
-    visibility: visible;
-} */
-
+/* ================== CENTRAL =================*/
 
  .center {
+     z-index: 1;
      background-color: white;
      background-image: url(../images/sea_background.png);
      padding: 0px;
@@ -172,36 +167,62 @@ nav div {
      position: relative;
  }
 
+ .central_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.central_wrapper > div {
+    display: block;
+    position: sticky;
+    align-self: flex-end;
+    transform: translateX(-24px);
+}
+
  .center div p {
     text-align: center;
 }
 
-.sea_img {
-    overflow: hidden;
+.sea_crop {
+    position: relative;
 }
 
+
  .whitecrop1 {
-     top: -295px;
-     left: -45px;
+     top: -364px;
+     left: -60px;
      position: relative;
-     height: 734px;
-     width: 734px;
+     height: 770px;
+     width: 770px;
      transform: rotate(45deg);
      background-color: white;
     
  }
 
  .whitecrop2 {
-    top: -1026px;
-    left: 880px;
+    top: -1341px;
+    left: 566px;
     position: relative;
-    height: 734px;
-    width: 734px;
+    height: 900px;
+    width: 900px;
+    transform: rotate(45deg);
+    background-color: white;
+}
+
+.whitecrop3 {
+    top: -2289px;
+    left: -701px;
+    position: relative;
+    height: 700px;
+    width: 700px;
     transform: rotate(45deg);
     background-color: white;
 }
 
 .r1 {
+    z-index: 100;
     position: absolute;
     height: 360px;
     width: 360px;
@@ -229,6 +250,7 @@ nav div {
  }
 
  .r2 {
+    z-index: 90;
     position: absolute;
     height: 750px;
     width: 750px;
@@ -251,6 +273,7 @@ nav div {
 }
 
 .r4 {
+    z-index: 110;
     background-color: #BACBDC;
     position: absolute;
     height: 240px;
@@ -300,38 +323,37 @@ nav div {
 
 
 .tblocks {
-    font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
     margin: 50px;
     display: flex;
     position: absolute;
     flex-direction: row;
     justify-content: space-around;
-    top: 750px;
+    top: 780px;
     width: 90%;
-    z-index: 900;
+    z-index: 2;
  
 }
 
 
 
 .tblocks div {
-  /*  border-width: 1px;  
-    border-color: black;
-    border-style: solid; */
-   /* box-shadow: 8px 8px 10px #000000d7; */
     display: block;
-    width: 280px;
+    width: 300px;
     height: 158px;
     background-color: rgba(9, 15, 19, 0.8);
     flex-direction: row;
+}
 
+.tblocks div p {
+    text-align: left;
+    margin-left: 1em;
 }
 
 .tb1 {
     padding-top: 20px;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .tb1 a {
@@ -340,10 +362,14 @@ nav div {
     margin: auto;
     width: 200px;
     height: 40px;
-    font-size: 16px;
+    font-size: 14px;
     transition: all 0.22s ease-out 0s;
     text-align: center;
     line-height: 43px;
+}
+
+#tba1 {
+    top: 33px;
 }
 
 .tb1 a:hover {
@@ -396,32 +422,32 @@ nav div {
 
 /* ================= SLIDER ================= */
 
+.slider_box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    transform: translateY(-1000px);
+}
+
 .slider {
     display: block;
-    position: absolute;
-    width: 100%;
-    height: 180px;
-    top: 1825px;
-    left: -130px;
+    height: 250px;
 }
 
 .view {
     display: block;
-    position: absolute;
     overflow: hidden;
-    height: 180px;
-    width: 400px;
-    top: 0px;
-    left: 460px;
+    height: 250px;
+    width: 800px;
 }
 
 .slides {
     color: white;
     display: flex;
-    position: absolute;
     padding: 0;
     margin: 0;
-    height: 180px;
+    height: 250px;
     width: 4000px;
     box-sizing: content-box;
     top: 0px;
@@ -444,7 +470,7 @@ nav div {
     align-self: center;
     display: block;
     justify-content: center;  
-    line-height: 18px;
+    line-height: 26px;
 } 
 
 .slidename {
@@ -461,43 +487,54 @@ nav div {
     align-self: center;
     display: block;
     justify-content: center;  
-    line-height: 18px;
+    line-height: 24px;
 } 
 
 .slides div {
     border: 0;
     margin: 0;
-    padding: 0;
     background-color: #06101ba4;
     display: inline-block;
-    height: 240px;
-    width: 400px;
+    height: 250px;
+    width: 800px;
 }
 
 #slider_right {
+    width: 50px;
+    display: block;
+    font-size: 46px;
     color: white;
-    background-color: rgb(14, 23, 27);
-    position: absolute;
-    top: 80px;
-    left: 875px;
+    position: relative;
+    top: -150px;
+    left: 755px;
 }
 
 #slider_left {
+    width: 50px;
+    display: block;
+    font-size: 46px;
     color: white;
-    background-color: rgb(14, 23, 27);
-    position: absolute;
-    top: 80px;
-    left: 378px;
+    position: relative;
+    top: -210px;
+    left: 16px;
 }
 
 /* ======== ADVANTEGES ========== */
+
+.advanteges_box {
+    display: flex;
+    justify-content: center;
+    background-color: #112132;
+    height: 593px;
+    position: relative;
+    transform: translateY(-1250px);
+}
 
 .advanteges {
     display: block;
     position: relative;
     width: 1080px;
     height: 593px;
-    top: -375px;
     left: 0px;
     background-image: url(../images/advanteges.png);
     background-size: cover;
@@ -509,7 +546,7 @@ nav div {
 .advanteges:after {
     position: absolute;
     transform: scaleX(1.5);
-    width: 100%;
+    width: 100vw;
     height: 593px;
     top: 0;
     left: 0;
@@ -555,6 +592,18 @@ nav div {
     z-index: 50;
 }
 
+.r5 {
+    background-color: #112132;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    left: -91px;
+    top: 44px;
+
+}
+
 
 /* ============= SIGNES ============== */
 
@@ -564,7 +613,7 @@ nav div {
     flex-direction: column;
     width: 100%;
     height: 500px;
-    top: 619px;
+    top: 650px;
     left: 0px;
 }
 
@@ -572,9 +621,9 @@ nav div {
   align-self: center;
   display: block;
   justify-content: center;  
-  font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
   color: white;
+  margin-right: 1em;
 }
 
 
@@ -584,7 +633,7 @@ nav div {
     flex-direction: column;
     width: 100%;
     height: 500px;
-    top: 1705px;
+    top: 1760px;
     left: 0px;
 }
 
