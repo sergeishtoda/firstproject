@@ -1,0 +1,32 @@
+
+/* =================== COURSES ================== */
+
+body {
+    height: 2000px;
+    background-image: linear-gradient(180deg, #11213200 500px, #112132ff 850px, #112132ff 1000px),
+                      linear-gradient(180deg, #ffffff 0px, #ffffff 50px, #ffffff00 100px),
+                      url(../images/yuriy-garnaev-395878-unsplash.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 150px;
+}
+
+#courses_main {
+
+}
+
+.top {
+    height: 700px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.card {
+    margin: 10px;
+    height: 180px;
+    width: 450px;
+    flex: 0 0 auto;
+    background-color: #00000080;
+}
