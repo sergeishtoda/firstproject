@@ -2,21 +2,105 @@
 /* =================== COURSES ================== */
 
 body {
-    height: 2000px;
-    background-image: linear-gradient(180deg, #11213200 500px, #112132ff 850px, #112132ff 1000px),
-                      linear-gradient(180deg, #ffffff 0px, #ffffff 50px, #ffffff00 100px),
-                      url(../images/yuriy-garnaev-395878-unsplash.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position-y: 150px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+width: 100%;
+padding: 0;
+margin: 0;
+}
+
+
+@media (min-width: 768px) { 
+    body { 
+        background-image: linear-gradient(180deg, #11213200 460px, #112132ff 540px, #112132ff 1000px),
+                        linear-gradient(180deg, #ffffff 0px, #ffffff 50px, #ffffff00 100px),
+                        url(../images/yuriy-garnaev-395878-unsplash.png);
+        background-size: 967px auto;
+        background-repeat: no-repeat;
+        background-position-y: 340px;
+  }
+
+  .actions li:first-child {
+    margin-right: 50px;
+    }
+    .actions ul {
+        margin-right: 140px;
+    }
+    
+}
+
+@media (min-width: 992px) { 
+    body { 
+        background-image: linear-gradient(180deg, #11213200 640px, #112132ff 710px, #112132ff 1000px),
+                        linear-gradient(180deg, #ffffff 0px, #ffffff 50px, #ffffff00 100px),
+                        url(../images/yuriy-garnaev-395878-unsplash.png);
+        background-size: 1248px auto;
+        background-repeat: no-repeat;
+        background-position-y: 340px;
+  }
+
+  .actions li:first-child {
+    margin-right: 85px;
+    }
+    .actions ul {
+        margin-right: 0px;
+    }
+}
+
+
+@media (min-width: 1200px) { 
+    body { 
+        background-image: linear-gradient(180deg, #11213200 500px, #112132ff 850px, #112132ff 1000px),
+                        linear-gradient(180deg, #ffffff 0px, #ffffff 50px, #ffffff00 100px),
+                        url(../images/yuriy-garnaev-395878-unsplash.png);
+        background-size: 1510px auto;
+        background-repeat: no-repeat;
+        background-position-y: 340px;
+  }
+
+  .actions li:first-child {
+    margin-right: 34px;
+    }
+    .actions ul {
+        margin-right: -30px;
+    }
+}
+
+@media (min-width: 1510px) { 
+    body { 
+        background-image: linear-gradient(180deg, #11213200 970px, #112132ff 1160px, #112132ff 1000px),
+                        linear-gradient(180deg, #ffffff 0px, #ffffff 50px, #ffffff00 100px),
+                        url(../images/yuriy-garnaev-395878-unsplash.png);
+        background-size: 2048px auto;
+        background-repeat: no-repeat;
+        background-position-y: 340px;
+    }
+
+  .actions li:first-child {
+        margin-right: 110px;
+    }
+    .actions ul {
+        margin-right: 16px;
+    }
+}
+
+
+
+
+header {
+    height: 164px;
 }
 
 #courses_main {
 
 }
 
-.top {
-    height: 700px;
+.lang {
+    position: relative;
+    height: 526px;
+}
+
+.first {
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -24,9 +108,66 @@ body {
 }
 
 .card {
-    margin: 10px;
+    margin: 5px;
     height: 180px;
     width: 450px;
     flex: 0 0 auto;
     background-color: #00000080;
+}
+
+
+.second {
+    padding: 30px 0;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.card2 {
+    border-radius: 1%;
+    background: linear-gradient(180deg, #FFFFFF 0%, #BACBDC 100%);
+    margin: 20px 5px;
+    height: 290px;
+    width: 450px;
+    flex: 0 0 auto;
+}
+
+
+.actions {
+    position: relative;
+    height: 50px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+.actions ul {
+    display: block;
+    width: 480px;
+    height: 50px;
+}
+
+.actions li {
+    border: solid 1px white;
+    border-radius: 2%;
+    display: inline-block;
+    margin: 0 5px;
+    width: 160px;
+    height: 50px;
+}
+
+.actions p {
+    text-align: center;
+    line-height: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+footer {
+    margin: 0;
+    background: #778798;
+    height: 360px;
 }
