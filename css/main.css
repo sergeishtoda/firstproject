@@ -651,9 +651,10 @@ footer {
     width: 100%;
 }
 
-footer img {
+.footer_back {
     position: relative;
-    max-width: 100%;
+    height: auto;
+    width: 100%;
 }
 
 .f_footer {
@@ -666,11 +667,99 @@ footer img {
     justify-content: space-between;
 }
 
-.f_footer div {
-    margin: 0 30px;
-    width: 270px;
-    height: 130px;
-    background-color: rgba(0, 0, 0, 0.575);
+.logo_bottom{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+
+}
+.logo_bottom h1{
+    font-family: 'Josefin Sans', 'Arial', sans-serif;
+    font-size: 45px;
+    padding-left: 15px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+
+.footer_left{
+    width: 330px;
+    height:100px;
+    position: relative;
+    flex: 0 0 auto;
+}
+.text_under_logo_bottom {
+    position: absolute;
+    transform: translate(90px, 28px);
+    color: white;
+}
+.footer_center {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    width: 180px;
+    height:100px;
+    flex: 0 0 auto;
+}
+.social_footer{
+    position: relative;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+}
+.social_footer ul {
+    padding: 0;
+    margin: 0;
+    flex: 0 0 auto;
+}
+.footer_contacts {
+    height: 50px;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer_contacts p{
+    letter-spacing: 1px;
+    margin: 2px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    flex: 0 0 auto;
+    color: white;
+}
+
+.footer_contacts p:last-child{
+    letter-spacing: 2px;
+}
+.footer_right{
+    color: white;
+    position: relative;
+    flex-flow: column nowrap;
+    display: flex;
+    justify-content: center;
+    padding-right: 22px;
+    width: 330px;
+    height:100px;
+    flex: 0 0 auto;
+    align-content: space-between;
+}
+
+.footer_right p{
+    margin: 8px 0;
+    font-size: 14px;
+    display: block;
+}
+.norn_logo_div{
+    top: -15px;
+    display: flex;
+    position: relative;
+}
+.phone_numb_footer{
+    position: absolute;
+    top: 600px;
+    padding-left: 24px;
 }
 
 
@@ -684,7 +773,8 @@ footer img {
 
 .map img {
     position: relative;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .map div {
