@@ -195,36 +195,51 @@ nav {
 }
 
 .courses_9_rectangles{
+    top:50px;
+    position: absolute;
     margin: 0;
     padding: 0;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translate(14vw, 20vw);
     display: grid;
-    grid-template-columns: repeat(4, 10vw);
-    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(4, 15vw);
+    grid-template-rows: repeat(3, 15vw);
     grid-gap: 1vw;
 }
 
 .text_top_header {
+    grid-column: 3 / 3;
+    grid-row: 1 / 2; 
     color: #000000c7;
-    padding-left: 163px;
-    padding-top: 130px;
-    font-size: 23px;
+    font-size: 1.7vw;
+    transform: rotate(45deg) translate(-24vw, 7vw);
 }
 
 .r1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    overflow: hidden;
     border: solid 2px black;
-    position: absolute;
-    width: 175px;
-    height: 175px;
-    transform: rotate(45deg);
-    left: 29px;
-    top: -26px;
+    width: 100%;
+    height: 100%;
+    transform: rotate(90deg);
     background-color: #87a1bd;
 }
 
-.r1>div {
+.r1>div:first-child {
+    width:100%;
+    font-size: 1.5vw;
+    margin-top: 21%;
+    margin-left: -5%;
     transform: rotate(-45deg);
 }
+
+.r1>div:last-child {
+    width:100%;
+    margin-left: 27%;
+    font-size: 1.4vw;
+    transform: rotate(-45deg);
+}
+
 
 .r1 a:hover {
     color: white;
@@ -263,14 +278,13 @@ nav {
  }
 
 .rect_red_45{
-   width: 45px;
-   height: 45px;
-   background: #432132;
-   display: flex;
-   position: absolute;
-   transform: rotate(45deg);
-   bottom: 96px;
-   left: 378px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    width: 50%;
+    height: 50%;
+    background: #432132;
+    position: absolute;
+    bottom: 0px;
 }
 
 .rect_4{
@@ -290,13 +304,15 @@ nav {
  }
 
  .rect_grey_80{
-    width: 80px;
-    height: 80px;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    overflow: hidden;
+    width: 50%;
+    height: 50%;
     background: #435465;
     position: absolute;
-    transform: rotate(45deg);
-    bottom: 36px;
-    left: 711px;
+    transform: rotate(90deg);
+    bottom: 0px;
  }
 .rect_white_37{
    transform: translate(-1px, -1px);
@@ -335,7 +351,7 @@ nav {
 
 .lang {
     position: relative;
-    height: 446px;
+    height: 38vw;
 }
 
 #level {
